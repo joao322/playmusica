@@ -1,0 +1,7 @@
+cria a interface do play de musicas 
+cria o buscadir de musicas
+cria o cria uma lista com as musicas exesuida 
+cria o sistema de repoucao 
+cria o sistema de playlist
+cria animacao
+    adicionado a capa da musica, animacao de palse  
