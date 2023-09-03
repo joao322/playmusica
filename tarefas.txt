@@ -1,7 +1,7 @@
-cria a interface do play de musicas [ja]
-cria o buscadir de musicas
-cria o cria uma lista com as musicas exesuida 
-cria o sistema de repoucao 
-cria o sistema de playlist
-cria animacao
-    adicionado a capa da musica, animacao de palse  
+cria uma scrip par buscar por musica e adiciona  a o sql 
+verificar se a musica ainda existe e si tem musicas novas
+
+cria o sistema de reproduca
+
+lista com a sequenci de musica e o modo aleatorio
+poder pula e voutal a musica
