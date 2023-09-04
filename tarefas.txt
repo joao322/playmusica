@@ -1,5 +1,5 @@
-cria uma scrip par buscar por musica e adiciona  a o sql 
-verificar se a musica ainda existe e si tem musicas novas
+cria uma scrip par buscar por musica e adiciona  a o sql ja
+verificar se a musica ainda existe e si tem musicas novas ja
 
 cria o sistema de reproduca
 
