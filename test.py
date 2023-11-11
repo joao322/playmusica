@@ -1,8 +1,5 @@
 import eyed3
-import playsound
 
-def reproduzirMusica(raquivo):
-    playsound.
 
 def capaMusica(arquivo) -> 'img':
     audio = eyed3.load(arquivo)
@@ -18,3 +15,5 @@ def duracaoMusica(arquivo) -> str:
     segundosRestantaes = int(duracaoSegundos % 60)
     
     return f'{duracaoMinutos}:{segundosRestantaes}'
+
+duracaoMusica('r.mp3')
