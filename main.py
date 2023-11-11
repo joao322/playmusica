@@ -47,7 +47,7 @@ class App(ctk.CTk):
             if not os.path.exists(caminho):
                 self.cursor.execute(
                     'DELETE FROM dados WHERE caminho = ?', (caminho,))
-                self.conexao.commit()
+                conexao.commit()
             else:
                 self.playlist(caminho_musica[0])
         tempoAtualizarTela = 70
