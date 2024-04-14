@@ -7,3 +7,5 @@ cria o sistema de reproduca
 
 lista com a sequenci de musica e o modo aleatorio
 poder pula e voutal a musica
+
+buscar no vai procura no /

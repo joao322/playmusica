@@ -38,22 +38,22 @@ class Root(ctk.CTk):
         ctk.CTkButton(self.menuDock, text='', image=self.imgPasta, width=28,
                       fg_color='transparent', command=lambda: self.mudaLinha_Tela(posy=56)).pack()
 
-        self.espacoMenu = ctk.CTkLabel(self.menuDock, text='')
-        self.espacoMenu.pack()
+        self.espacamentoMenu = ctk.CTkLabel(self.menuDock, text='')
+        self.espacamentoMenu.pack()
         
         self.mudaLinha_Tela()
 
         ctk.CTkButton(self.menuDock, text='',  width=28,
                       image=self.imgConfiguaracao, fg_color='transparent').pack()
 
-        self.listaMusicas = buscador.buscador('/home', ('.mp3', '.ogg'))
+        self.listaMusicas = buscador.buscador('/home', ('.mp3', '.ogg', '.wav'))
 
     def redimensionar(self, event=None):
         altura = self.winfo_height()
         largura = self.winfo_width()
         
-        self.espacoMenu.configure(height=altura - 115)
-        self.telaAtual.configure(width=largura - 40, height=altura)
+        self.espacamentoMenu.configure(height=altura - 115)
+        self.telaAtual.configure(width=largura - 32, height=altura)
 
     def mudaLinha_Tela(self, posy=0, tela='home'):
 
@@ -78,17 +78,16 @@ class Root(ctk.CTk):
         if init:
             altura = self.winfo_height()
             largura = self.winfo_width()
-            self.telaAtual = ctk.CTkFrame(self, largura, altura, fg_color='transparent')
+            self.telaAtual = ctk.CTkFrame(self, largura -33, altura, fg_color='#101010')
             self.telaAtual.place(x=33,y=0)
             #self.telaAtual.bind('<Configure>', self.tela1)
-            telaPlaylist = ctk.CTkScrollableFrame(self.telaAtual,largura, altura, fg_color='transparent', corner_radius=0)
+            telaPlaylist = ctk.CTkScrollableFrame(self.telaAtual,largura-50, altura-5, fg_color='transparent', corner_radius=0)
             telaPlaylist.place(x=0,y=2)
             
             if self.listaMusicas:
                 for musica in self.listaMusicas:
-                    ctk.CTkButton(telaPlaylist,text=musica[0], fg_color='#101010',anchor='w', image=self.imgPasta).pack()
-                    ctk.CTkLabel(telaPlaylist, fg_color='#53396b', height=0, width=100, text='',font=("arial", 1)).pack()
-            
+                    ctk.CTkButton(telaPlaylist,text=musica[0], fg_color='transparent',anchor='w', image=self.imgPasta, width=largura-33).pack()
+                    ctk.CTkLabel(telaPlaylist, fg_color='#53396b', height=0, width=largura-33, text='',font=("arial", 1), ).pack()
             
 if __name__ == "__main__":
     Root().mainloop()
